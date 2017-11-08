@@ -12,5 +12,5 @@ get '/simple_example/monitor' do
     codigo_estado: 200,
     msj_estado: "OK",
     desc_personalizada_estado: "Servicio opera correctamente"
-  }
+  }.to_json
 end
