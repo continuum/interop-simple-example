@@ -8,9 +8,13 @@ end
 
 get '/simple_example/monitor' do
   content_type :json
-  {
-    codigo_estado: 200,
-    msj_estado: "OK",
-    desc_personalizada_estado: "Servicio opera correctamente"
-  }.to_json
+  if (Time.now.min / 10).even?
+    {
+      codigo_estado: 200,
+      msj_estado: "OK",
+      desc_personalizada_estado: "Servicio opera correctamente"
+    }.to_json
+  else
+    sleep 60 # Time out
+  end
 end
