@@ -7,7 +7,7 @@ info:
     Servicio Simple de Referencia
 schemes:
   - https
-host: simple-service-interop.herokuapp.com
+host: simple-service-interop-flaky.herokuapp.com
 basePath: /simple_example
 paths:
   /hello:
